@@ -1,0 +1,120 @@
+/* 通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* 棋盤與棋譜的容器 */
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* 棋盤樣式 */
+#chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 1px;
+    border: 2px solid #333;
+}
+
+.chess-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.chess-square:nth-child(even) {
+    background-color: #f0d9b5;
+}
+
+.chess-square:nth-child(odd) {
+    background-color: #b58863;
+}
+
+/* 棋譜樣式 */
+#move-list-container {
+    width: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+#move-list {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 控制按鈕樣式 */
+#controls {
+    margin: 20px auto;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 遊戲資訊區域 */
+#game-info {
+    margin-top: 20px;
+}
+
+#game-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+#recommendations-container {
+    margin-top: 20px;
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#recommended-moves p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+#recommended-moves {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#recommended-moves strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#recommended-moves ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+#recommended-moves li {
+    margin: 5px 0;
+}

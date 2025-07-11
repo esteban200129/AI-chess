@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Chess Game</h1>
+    <div id="game-container">
+        <div id="move-list-container">
+            <h3>PGN Moves</h3>
+            <div id="move-list">
+                <!-- PGN 棋譜將由 JavaScript 動態插入 -->
+            </div>
+        </div>
+        <div id="chess-board">
+            <!-- 棋盤將由 JavaScript 動態生成 -->
+        </div>
+    </div>
+    <div id="controls">
+        <button id="undo-button">Undo Move</button>
+        <button id="ai-move-button">AI Move</button>
+        <button id="reset-button">Reset Board</button>
+    </div>
+    <div id="game-info">
+        <p id="opening-name">Current Opening: Unknown</p>
+        <p id="last-move">Last Move: None</p>
+        <p id="game-status">Game is ongoing</p>
+    </div>
+    <div id="recommendations-container">
+        <h3>Recommended Moves</h3>
+        <div id="recommended-moves">
+            <!-- 推薦的下一步棋將由 JavaScript 動態插入 -->
+        </div>
+    </div>
+    <div id="possible-openings">
+        <h3>Possible Openings:</h3>
+        <ul id="openings-list">
+            <!-- 動態插入開局列表 -->
+        </ul>
+    </div>
+    <script>
+        const boardFen = "{{ board_fen }}";  <!-- 從後端傳入初始棋盤狀態 -->
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
